@@ -40,7 +40,6 @@
 		A4C9D22220419793003A7EE6 /* TapJSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFC3D5200FBE9B00096652 /* TapJSONSerializer.swift */; };
 		A4C9D22320419793003A7EE6 /* TapDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFC3D920107CAE00096652 /* TapDecoder.swift */; };
 		A4C9D22420419793003A7EE6 /* TapURLSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB046200F918400B53E85 /* TapURLSerializer.swift */; };
-		A4C9D22720419793003A7EE6 /* Pods_TapNetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721CB88AF2AAE905914E57CD /* Pods_TapNetworkManager.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A4C9D22920419793003A7EE6 /* TapNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A4AC0F39200E3E43001306C3 /* TapNetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -85,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4C9D22720419793003A7EE6 /* Pods_TapNetworkManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
