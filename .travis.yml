@@ -1,15 +1,18 @@
 language: objective-c
 osx_image: xcode9.2
-xcode_workspace: TapNetworkManager.xcworkspace
-xcode_scheme: TapNetworkManager_Carthage
 branches:
-only:
-- master
+  only:
+    - master
+env:
+  global:
+  - LC_CTYPE=en_US.UTF-8
+  - LANG=en_US.UTF-8
+before_install:
+  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 script:
-- set -o pipefail
-- xcodebuild -version
-- xcodebuild -showsdks
-
-xcodebuild -workspace "TapNetworkManager.xcworkspace" -scheme "TapNetworkManager_Carthage" -destination "OS=8.0,name=iPhone 4S" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
-
-xcodebuild -workspace "TapNetworkManager.xcworkspace" -scheme "TapNetworkManager_Carthage" -destination "OS=8.0,name=iPhone 4S" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+  - xcodebuild -workspace "TapNetworkManager.xcworkspace" -scheme "TapNetworkManager_Carthage" -destination "OS=8.0,name=iPhone 4S" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+  - xcodebuild -workspace "TapNetworkManager.xcworkspace" -scheme "TapNetworkManager_Carthage" -destination "OS=8.0,name=iPhone 4S" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+  
