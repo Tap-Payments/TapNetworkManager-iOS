@@ -5,6 +5,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'TapNetworkManager' do
 
-  pod 'SwiftLint'
+#  pod 'SwiftLint'
 
 end
