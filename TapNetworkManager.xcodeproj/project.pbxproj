@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6199D23E663954DFDF9AD897 /* Pods_TapNetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721CB88AF2AAE905914E57CD /* Pods_TapNetworkManager.framework */; };
+		6199D23E663954DFDF9AD897 /* Pods_TapNetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721CB88AF2AAE905914E57CD /* Pods_TapNetworkManager.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A40EB047200F918400B53E85 /* TapURLSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB046200F918400B53E85 /* TapURLSerializer.swift */; };
 		A40EB049200F91A800B53E85 /* TapEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB048200F91A800B53E85 /* TapEncoder.swift */; };
 		A482759B2015E1E000FCFD9E /* TapPropertyListSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A482759A2015E1E000FCFD9E /* TapPropertyListSerializer.swift */; };
