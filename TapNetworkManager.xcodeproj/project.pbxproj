@@ -44,7 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		40B3E288CFA615BDCC21C559 /* Pods-TapNetworkManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapNetworkManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapNetworkManager/Pods-TapNetworkManager.release.xcconfig"; sourceTree = "<group>"; };
+		1BA22F3C21F05B07A87C11C5 /* Pods-TapNetworkManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapNetworkManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapNetworkManager/Pods-TapNetworkManager.debug.xcconfig"; sourceTree = "<group>"; };
+		1D7B7B9344156821F275A6E2 /* Pods-TapNetworkManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapNetworkManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapNetworkManager/Pods-TapNetworkManager.release.xcconfig"; sourceTree = "<group>"; };
 		721CB88AF2AAE905914E57CD /* Pods_TapNetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapNetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40EB046200F918400B53E85 /* TapURLSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapURLSerializer.swift; sourceTree = "<group>"; };
 		A40EB048200F91A800B53E85 /* TapEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEncoder.swift; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		A4C9D23020419793003A7EE6 /* TapNetworkManager_Carthage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TapNetworkManager_Carthage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C9D23120419793003A7EE6 /* TapNetworkManager copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TapNetworkManager copy-Info.plist"; path = "/Users/dpashkov/Documents/Xcode/TapNetworkManager-iOS/TapNetworkManager copy-Info.plist"; sourceTree = "<absolute>"; };
 		A4C9D23220419896003A7EE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		FC541D9CD63E4E11869D3A20 /* Pods-TapNetworkManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapNetworkManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapNetworkManager/Pods-TapNetworkManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +102,8 @@
 		53971D8652DE57169B7E22B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FC541D9CD63E4E11869D3A20 /* Pods-TapNetworkManager.debug.xcconfig */,
-				40B3E288CFA615BDCC21C559 /* Pods-TapNetworkManager.release.xcconfig */,
+				1BA22F3C21F05B07A87C11C5 /* Pods-TapNetworkManager.debug.xcconfig */,
+				1D7B7B9344156821F275A6E2 /* Pods-TapNetworkManager.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -506,7 +506,7 @@
 		};
 		A4AC0F3F200E3E43001306C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC541D9CD63E4E11869D3A20 /* Pods-TapNetworkManager.debug.xcconfig */;
+			baseConfigurationReference = 1BA22F3C21F05B07A87C11C5 /* Pods-TapNetworkManager.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -531,7 +531,7 @@
 		};
 		A4AC0F40200E3E43001306C3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40B3E288CFA615BDCC21C559 /* Pods-TapNetworkManager.release.xcconfig */;
+			baseConfigurationReference = 1D7B7B9344156821F275A6E2 /* Pods-TapNetworkManager.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -555,7 +555,6 @@
 		};
 		A4C9D22E20419793003A7EE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC541D9CD63E4E11869D3A20 /* Pods-TapNetworkManager.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -580,7 +579,6 @@
 		};
 		A4C9D22F20419793003A7EE6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40B3E288CFA615BDCC21C559 /* Pods-TapNetworkManager.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
