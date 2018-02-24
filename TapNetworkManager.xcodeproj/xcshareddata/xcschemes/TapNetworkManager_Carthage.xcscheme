@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A4AC0F35200E3E43001306C3"
-               BuildableName = "TapNetworkManager.framework"
-               BlueprintName = "TapNetworkManager"
+               BlueprintIdentifier = "A4C9D21320419793003A7EE6"
+               BuildableName = "TapNetworkManager_Carthage.framework"
+               BlueprintName = "TapNetworkManager_Carthage"
                ReferencedContainer = "container:TapNetworkManager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A4AC0F35200E3E43001306C3"
-            BuildableName = "TapNetworkManager.framework"
-            BlueprintName = "TapNetworkManager"
+            BlueprintIdentifier = "A4C9D21320419793003A7EE6"
+            BuildableName = "TapNetworkManager_Carthage.framework"
+            BlueprintName = "TapNetworkManager_Carthage"
             ReferencedContainer = "container:TapNetworkManager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A4AC0F35200E3E43001306C3"
-            BuildableName = "TapNetworkManager.framework"
-            BlueprintName = "TapNetworkManager"
+            BlueprintIdentifier = "A4C9D21320419793003A7EE6"
+            BuildableName = "TapNetworkManager_Carthage.framework"
+            BlueprintName = "TapNetworkManager_Carthage"
             ReferencedContainer = "container:TapNetworkManager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

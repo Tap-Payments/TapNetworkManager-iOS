@@ -5,6 +5,10 @@
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //
 
+import class Foundation.NSNull.NSNull
+import struct Foundation.NSURL.URLComponents
+import struct Foundation.NSURL.URLQueryItem
+
 /// TapURLSerializer class.
 internal class TapURLSerializer {
 

@@ -5,6 +5,14 @@
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //
 
+import struct Foundation.NSData.Data
+import struct Foundation.NSURL.URL
+import struct Foundation.NSURLRequest.URLRequest
+import class Foundation.NSURLResponse.URLResponse
+import class Foundation.NSURLSession.URLSession
+import class Foundation.NSURLSession.URLSessionConfiguration
+import class Foundation.NSURLSession.URLSessionDataTask
+
 /// Network Manager class.
 public class TapNetworkManager {
 

@@ -5,6 +5,11 @@
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //
 
+import struct Darwin.POSIX.netinet.`in`.sockaddr_in
+import var Darwin.POSIX.sys.socket.AF_INET
+import struct Darwin.POSIX.sys.socket.sockaddr
+import struct Darwin.POSIX.sys.types.sa_family_t
+import class Dispatch.DispatchQueue
 import class SystemConfiguration.SCNetworkReachability.SCNetworkReachability
 import struct SystemConfiguration.SCNetworkReachability.SCNetworkReachabilityContext
 import func SystemConfiguration.SCNetworkReachability.SCNetworkReachabilityCreateWithAddress

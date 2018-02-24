@@ -5,6 +5,7 @@
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //
 
+import struct Foundation.NSData.Data
 import class Foundation.NSPropertyList.PropertyListSerialization
 
 internal class TapPropertyListSerializer {
