@@ -5,3 +5,11 @@ xcode_scheme: TapNetworkManager_Carthage
 branches:
 only:
 - master
+script:
+- set -o pipefail
+- xcodebuild -version
+- xcodebuild -showsdks
+
+xcodebuild -workspace "TapNetworkManager.xcworkspace" -scheme "TapNetworkManager_Carthage" -destination "OS=8.0,name=iPhone 4S" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+
+xcodebuild -workspace "TapNetworkManager.xcworkspace" -scheme "TapNetworkManager_Carthage" -destination "OS=8.0,name=iPhone 4S" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
