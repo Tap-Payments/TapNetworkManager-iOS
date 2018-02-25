@@ -66,7 +66,7 @@
 		A4AFC3D920107CAE00096652 /* TapDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapDecoder.swift; sourceTree = "<group>"; };
 		A4AFC3DB2010C2A100096652 /* TapNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapNetworkError.swift; sourceTree = "<group>"; };
 		A4BBC9C520344ECF005E3398 /* TapURLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapURLModel.swift; sourceTree = "<group>"; };
-		A4C9D23020419793003A7EE6 /* TapNetworkManager_Carthage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TapNetworkManager_Carthage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4C9D23020419793003A7EE6 /* TapNetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TapNetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C9D23220419896003A7EE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AC0F36200E3E43001306C3 /* TapNetworkManager.framework */,
-				A4C9D23020419793003A7EE6 /* TapNetworkManager_Carthage.framework */,
+				A4C9D23020419793003A7EE6 /* TapNetworkManager.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 			);
 			name = TapNetworkManager_Carthage;
 			productName = TapNetworkManager;
-			productReference = A4C9D23020419793003A7EE6 /* TapNetworkManager_Carthage.framework */;
+			productReference = A4C9D23020419793003A7EE6 /* TapNetworkManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -552,7 +552,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = company.tap.ios.TapNetworkManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TapNetworkManager;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -576,7 +576,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = company.tap.ios.TapNetworkManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TapNetworkManager;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
