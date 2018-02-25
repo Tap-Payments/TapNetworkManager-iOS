@@ -67,7 +67,6 @@
 		A4AFC3DB2010C2A100096652 /* TapNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapNetworkError.swift; sourceTree = "<group>"; };
 		A4BBC9C520344ECF005E3398 /* TapURLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapURLModel.swift; sourceTree = "<group>"; };
 		A4C9D23020419793003A7EE6 /* TapNetworkManager_Carthage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TapNetworkManager_Carthage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4C9D23120419793003A7EE6 /* TapNetworkManager copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TapNetworkManager copy-Info.plist"; path = "/Users/dpashkov/Documents/Xcode/TapNetworkManager-iOS/TapNetworkManager copy-Info.plist"; sourceTree = "<absolute>"; };
 		A4C9D23220419896003A7EE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -125,7 +124,6 @@
 				A4AC0F37200E3E43001306C3 /* Products */,
 				53971D8652DE57169B7E22B2 /* Pods */,
 				4E61C700D4D1BDEC1A497FBE /* Frameworks */,
-				A4C9D23120419793003A7EE6 /* TapNetworkManager copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,7 +203,6 @@
 			buildPhases = (
 				FE42C3681AC599548773E44D /* [CP] Check Pods Manifest.lock */,
 				A4AC0F31200E3E43001306C3 /* Sources */,
-				A4AC0F41200E4324001306C3 /* Swift Lint */,
 				A4AC0F32200E3E43001306C3 /* Frameworks */,
 				A4AC0F33200E3E43001306C3 /* Headers */,
 				A4AC0F34200E3E43001306C3 /* Resources */,
@@ -308,20 +305,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TapNetworkManager/Pods-TapNetworkManager-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		A4AC0F41200E4324001306C3 /* Swift Lint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Swift Lint";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		FE42C3681AC599548773E44D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -564,7 +547,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "TapNetworkManager copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TapNetworkManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -588,7 +571,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "TapNetworkManager copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TapNetworkManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
