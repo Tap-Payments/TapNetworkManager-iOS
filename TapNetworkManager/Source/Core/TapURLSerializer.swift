@@ -55,7 +55,7 @@ extension TapURLSerializer: TapEncoder {
 
         case .array(let params):
 
-            let urlEncodedParams = params.flatMap { $0.description.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) }
+            let urlEncodedParams = params.compactMap { $0.description.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) }
             guard params.count == urlEncodedParams.count else {
 
                 throw TapNetworkError.serializationError(.wrongData)
