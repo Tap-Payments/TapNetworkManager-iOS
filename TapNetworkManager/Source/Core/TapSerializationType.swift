@@ -1,10 +1,15 @@
 //
 //  TapSerializationType.swift
-//  TapNetworkManager
+//  TapNetworkManager/Core
 //
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //
 
+/// Serialization type.
+///
+/// - json: JSON
+/// - propertyList: Property list / XML
+/// - url: URL
 public enum TapSerializationType {
 
     case json

@@ -1,6 +1,6 @@
 //
 //  TapReachabilityManager.swift
-//  TapNetworkManager
+//  TapNetworkManager/Reachability
 //
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //

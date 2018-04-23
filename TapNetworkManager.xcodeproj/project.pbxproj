@@ -10,6 +10,8 @@
 		6199D23E663954DFDF9AD897 /* Pods_TapNetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721CB88AF2AAE905914E57CD /* Pods_TapNetworkManager.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A40EB047200F918400B53E85 /* TapURLSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB046200F918400B53E85 /* TapURLSerializer.swift */; };
 		A40EB049200F91A800B53E85 /* TapEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB048200F91A800B53E85 /* TapEncoder.swift */; };
+		A4752A22208E12AA003118DB /* TapImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4752A21208E12AA003118DB /* TapImageLoader.swift */; };
+		A4752A23208E2267003118DB /* TapImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4752A21208E12AA003118DB /* TapImageLoader.swift */; };
 		A482759B2015E1E000FCFD9E /* TapPropertyListSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A482759A2015E1E000FCFD9E /* TapPropertyListSerializer.swift */; };
 		A482759D2015E77C00FCFD9E /* TapSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A482759C2015E77C00FCFD9E /* TapSerializer.swift */; };
 		A48275A020160ECA00FCFD9E /* TapReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A482759F20160ECA00FCFD9E /* TapReachabilityManager.swift */; };
@@ -49,6 +51,7 @@
 		721CB88AF2AAE905914E57CD /* Pods_TapNetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapNetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40EB046200F918400B53E85 /* TapURLSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapURLSerializer.swift; sourceTree = "<group>"; };
 		A40EB048200F91A800B53E85 /* TapEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEncoder.swift; sourceTree = "<group>"; };
+		A4752A21208E12AA003118DB /* TapImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapImageLoader.swift; sourceTree = "<group>"; };
 		A482759A2015E1E000FCFD9E /* TapPropertyListSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapPropertyListSerializer.swift; sourceTree = "<group>"; };
 		A482759C2015E77C00FCFD9E /* TapSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapSerializer.swift; sourceTree = "<group>"; };
 		A482759F20160ECA00FCFD9E /* TapReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapReachabilityManager.swift; sourceTree = "<group>"; };
@@ -107,6 +110,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A4752A20208E111F003118DB /* ImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				A4752A21208E12AA003118DB /* TapImageLoader.swift */,
+			);
+			path = ImageLoading;
+			sourceTree = "<group>";
+		};
 		A482759E20160EB300FCFD9E /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AC0F45200E448A001306C3 /* Core */,
+				A4752A20208E111F003118DB /* ImageLoading */,
 				A482759E20160EB300FCFD9E /* Reachability */,
 			);
 			path = Source;
@@ -329,6 +341,7 @@
 				A4AC0F53200E5568001306C3 /* TapBodyModel.swift in Sources */,
 				A4AFC3D6200FBE9B00096652 /* TapJSONSerializer.swift in Sources */,
 				A4AFC3DA20107CAE00096652 /* TapDecoder.swift in Sources */,
+				A4752A22208E12AA003118DB /* TapImageLoader.swift in Sources */,
 				A40EB047200F918400B53E85 /* TapURLSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4752A23208E2267003118DB /* TapImageLoader.swift in Sources */,
 				A4C9D21620419793003A7EE6 /* TapEncoder.swift in Sources */,
 				A4C9D21720419793003A7EE6 /* TapSerializer.swift in Sources */,
 				A4C9D21820419793003A7EE6 /* TapURLModel.swift in Sources */,

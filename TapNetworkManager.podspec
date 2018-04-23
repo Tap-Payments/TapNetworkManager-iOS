@@ -6,7 +6,7 @@ Pod::Spec.new do |tapNetworkManager|
     tapNetworkManager.name = 'TapNetworkManager'
     tapNetworkManager.summary = 'Lightweight network manager for iOS.'
     tapNetworkManager.requires_arc = true
-    tapNetworkManager.version = '1.0.3'
+    tapNetworkManager.version = '1.1'
     tapNetworkManager.license = { :type => 'MIT', :file => 'LICENSE' }
     tapNetworkManager.author = { 'Tap Payments' => 'hello@tap.company' }
     tapNetworkManager.homepage = 'https://github.com/Tap-Payments/TapNetworkManager-iOS'
@@ -16,6 +16,16 @@ Pod::Spec.new do |tapNetworkManager|
     tapNetworkManager.subspec 'Core' do |core|
     
         core.source_files = 'TapNetworkManager/Source/Core/*.swift'
+    
+    end
+    
+    tapNetworkManager.subspec 'ImageLoading' do |imageLoading|
+    
+        imageLoading.dependency 'SDWebImage/Core'
+        imageLoading.dependency 'TapAdditionsKit/Foundation/URLSession'
+        imageLoading.dependency 'TapNetworkManager/Core'
+        
+        imageLoading.source_files = 'TapNetworkManager/Source/ImageLoading/*.swift'
     
     end
     

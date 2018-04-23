@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: d21b9706cebfc228844d9b87fba8e9a79b4c313d
+PODS:
+  - SDWebImage/Core (4.3.3)
+  - TapAdditionsKit/Foundation/URLSession (1.0.4):
+    - TapAdditionsKit/Foundation/URLSessionDataTaskResult
+  - TapAdditionsKit/Foundation/URLSessionDataTaskResult (1.0.4)
+
+DEPENDENCIES:
+  - SDWebImage/Core
+  - TapAdditionsKit/Foundation/URLSession
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SDWebImage
+    - TapAdditionsKit
+
+SPEC CHECKSUMS:
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  TapAdditionsKit: b924aba041033ea04e8d78bfa8dc11140f953012
+
+PODFILE CHECKSUM: 920abda2a005b5540d7988bbe81abe1213024dde
 
 COCOAPODS: 1.5.0

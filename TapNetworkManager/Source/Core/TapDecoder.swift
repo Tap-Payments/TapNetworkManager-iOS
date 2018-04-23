@@ -1,6 +1,6 @@
 //
 //  TapDecoder.swift
-//  TapNetworkManager
+//  TapNetworkManager/Core
 //
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //
