@@ -22,6 +22,11 @@ public class TapImageLoader {
     public typealias ImagesResponse = ([UIImage]?, Error?) -> Void
     public typealias ProgressCallback = (CGFloat) -> Void
     
+    // MARK: Properties
+    
+    /// Shared instance.
+    public static let shared = TapImageLoader()
+    
     // MARK: Methods
     
     public func downloadImage(from url: URL, completion: @escaping ImageResponse) {
@@ -149,6 +154,8 @@ public class TapImageLoader {
     }()
     
     //MARK: Methods
+    
+    private init() {}
     
     private func downloadImages(from urls: [URL], loadCacheSynchronously: Bool, loadImagesSynchronously: Bool, completion: @escaping ImagesResponse) {
         
