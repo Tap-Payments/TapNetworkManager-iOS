@@ -7,7 +7,5 @@ target 'TapNetworkManager' do
     
     pod 'SDWebImage/Core'
     pod 'TapAdditionsKit/Foundation/URLSession'
-    
-#  pod 'SwiftLint'
 
 end

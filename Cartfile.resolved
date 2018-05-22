@@ -1,0 +1,3 @@
+github "Tap-Payments/TapAdditionsKit-iOS" "1.0.7"
+github "Tap-Payments/TapSwiftFixes" "1.0.4"
+github "rs/SDWebImage" "4.3.3"

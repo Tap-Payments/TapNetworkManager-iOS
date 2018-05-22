@@ -24,6 +24,7 @@ internal class TapURLSerializer {
     private init() {}
 }
 
+// MARK: - TapEncoder
 extension TapURLSerializer: TapEncoder {
 
     internal typealias EncodedType = String
@@ -108,6 +109,7 @@ extension TapURLSerializer: TapEncoder {
     }
 }
 
+// MARK: - TapDecoder
 extension TapURLSerializer: TapDecoder {
 
     internal typealias DecodedType = [String: Any]

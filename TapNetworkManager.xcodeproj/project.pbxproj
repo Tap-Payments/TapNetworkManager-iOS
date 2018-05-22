@@ -23,7 +23,6 @@
 		A4AC0F53200E5568001306C3 /* TapBodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC0F52200E5568001306C3 /* TapBodyModel.swift */; };
 		A4AFC3D4200FB0E100096652 /* TapSerializationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFC3D3200FB0E100096652 /* TapSerializationType.swift */; };
 		A4AFC3D6200FBE9B00096652 /* TapJSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFC3D5200FBE9B00096652 /* TapJSONSerializer.swift */; };
-		A4AFC3D8200FBFAD00096652 /* TapNetworkManager.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A4AFC3D7200FBFAD00096652 /* TapNetworkManager.podspec */; };
 		A4AFC3DA20107CAE00096652 /* TapDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFC3D920107CAE00096652 /* TapDecoder.swift */; };
 		A4AFC3DC2010C2A100096652 /* TapNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFC3DB2010C2A100096652 /* TapNetworkError.swift */; };
 		A4BBC9C620344ECF005E3398 /* TapURLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BBC9C520344ECF005E3398 /* TapURLModel.swift */; };
@@ -43,6 +42,7 @@
 		A4C9D22320419793003A7EE6 /* TapDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AFC3D920107CAE00096652 /* TapDecoder.swift */; };
 		A4C9D22420419793003A7EE6 /* TapURLSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB046200F918400B53E85 /* TapURLSerializer.swift */; };
 		A4C9D22920419793003A7EE6 /* TapNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A4AC0F39200E3E43001306C3 /* TapNetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4F0AFE420A603C00051A264 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F0AFE320A603C00051A264 /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +71,8 @@
 		A4BBC9C520344ECF005E3398 /* TapURLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapURLModel.swift; sourceTree = "<group>"; };
 		A4C9D23020419793003A7EE6 /* TapNetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TapNetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C9D23220419896003A7EE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A4F0AFE220A600160051A264 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		A4F0AFE320A603C00051A264 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F0AFE420A603C00051A264 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +98,7 @@
 		4E61C700D4D1BDEC1A497FBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4F0AFE320A603C00051A264 /* SDWebImage.framework */,
 				A4C9D23220419896003A7EE6 /* Foundation.framework */,
 				721CB88AF2AAE905914E57CD /* Pods_TapNetworkManager.framework */,
 			);
@@ -130,6 +134,7 @@
 		A4AC0F2C200E3E43001306C3 = {
 			isa = PBXGroup;
 			children = (
+				A4F0AFE220A600160051A264 /* Cartfile */,
 				A4AFC3D7200FBFAD00096652 /* TapNetworkManager.podspec */,
 				A4AC0F38200E3E43001306C3 /* TapNetworkManager */,
 				A4AC0F37200E3E43001306C3 /* Products */,
@@ -236,6 +241,7 @@
 				A4C9D22620419793003A7EE6 /* Frameworks */,
 				A4C9D22820419793003A7EE6 /* Headers */,
 				A4C9D22A20419793003A7EE6 /* Resources */,
+				A4F0AFE520A603D30051A264 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,7 +294,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4AFC3D8200FBFAD00096652 /* TapNetworkManager.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +307,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A4F0AFE520A603D30051A264 /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/TapAdditionsKit.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		FE42C3681AC599548773E44D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -549,6 +570,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TapNetworkManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -573,6 +598,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TapNetworkManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

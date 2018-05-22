@@ -22,6 +22,9 @@ public class TapNetworkManager {
 
     // MARK: Properties
 
+    /// Defines if request logging enabled.
+    public static var isRequestLoggingEnabled = false
+    
     /// Base URL.
     public private(set) var baseURL: URL
 
@@ -34,6 +37,11 @@ public class TapNetworkManager {
         self.session = URLSession(configuration: configuration)
     }
 
+    /// Performs request operation and calls completion when request finishes.
+    ///
+    /// - Parameters:
+    ///   - operation: Network request operation.
+    ///   - completion: Completion closure that is called when request finishes.
     public func performRequest(_ operation: TapNetworkRequestOperation, completion: RequestCompletionClosure?) {
 
         var request: URLRequest
@@ -41,9 +49,20 @@ public class TapNetworkManager {
 
             request = try self.createURLRequest(from: operation)
 
+            if type(of: self).isRequestLoggingEnabled {
+                
+                self.log(request)
+            }
+            
             var dataTask: URLSessionDataTask?
-            let dataTaskCompletion: (Data?, URLResponse?, Error?) -> Void = { (data, response, anError) in
+            let dataTaskCompletion: (Data?, URLResponse?, Error?) -> Void = { [weak self] (data, response, anError) in
 
+                if TapNetworkManager.isRequestLoggingEnabled {
+                    
+                    self?.log(response, data: data, serializationType: operation.responseType)
+                    self?.log(anError)
+                }
+                
                 if let d = data {
 
                     do {
@@ -161,6 +180,77 @@ public class TapNetworkManager {
             return Constants.plistContentTypeHeaderValue
 
         default: return ""
+        }
+    }
+    
+    private func log(_ request: URLRequest, serializationType: TapSerializationType? = nil) {
+        
+        print("Request:\n---------------------")
+        print("\(request.httpMethod ?? "nil") \(request.url?.absoluteString ?? "nil")")
+        
+        self.log(request.allHTTPHeaderFields)
+        self.log(request.httpBody, serializationType: serializationType)
+        
+        print("---------------------------")
+    }
+    
+    private func log(_ response: URLResponse?, data: Data?, serializationType: TapSerializationType? = nil) {
+        
+        guard let nonnullResponse = response else { return }
+        
+        print("Response:\n---------------------")
+        
+        if let url = nonnullResponse.url {
+            
+            print("URL: \(url.absoluteString)")
+        }
+        
+        guard let httpResponse = nonnullResponse as? HTTPURLResponse else {
+            
+            print("------------------------")
+            return
+        }
+        
+        print("HTTP status code: \(httpResponse.statusCode)")
+        
+        self.log(httpResponse.allHeaderFields)
+        self.log(data, serializationType: serializationType)
+        
+        print("------------------------")
+    }
+    
+    private func log(_ error: Error?) {
+        
+        guard let nonnullError = error else { return }
+        print("Error: \(nonnullError)")
+    }
+    
+    private func log(_ headerFields: [AnyHashable: Any]?) {
+        
+        guard let nonnullHeaderFields = headerFields, nonnullHeaderFields.count > 0 else { return }
+        
+        let headersString = (nonnullHeaderFields.map { "\($0.key): \($0.value)" }).joined(separator: "\n")
+        print("Headers:\n\(headersString)")
+    }
+    
+    private func log(_ data: Data?, serializationType: TapSerializationType? = nil) {
+        
+        guard let body = data, let type = serializationType, let object = try? TapSerializer.deserialize(body, with: type) else { return }
+        
+        var jsonWritingOptions: JSONSerialization.WritingOptions
+        if #available(iOS 11.0, *) {
+            
+            jsonWritingOptions = [.prettyPrinted, .sortedKeys]
+            
+        } else {
+            
+            jsonWritingOptions = [.prettyPrinted]
+        }
+        
+        if let jsonData = try? JSONSerialization.data(withJSONObject: object, options: jsonWritingOptions),
+            let jsonString = String(data: jsonData, encoding: .utf8) {
+            
+            print("Body:\n\(jsonString)")
         }
     }
 }

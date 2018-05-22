@@ -5,6 +5,7 @@
 //  Copyright © 2018 Tap Payments. All rights reserved.
 //
 
+/// Tap Serializer class.
 internal class TapSerializer {
 
     internal static func serialize(_ object: Any, with format: TapSerializationType) throws -> Any {

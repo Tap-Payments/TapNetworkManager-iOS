@@ -22,6 +22,7 @@ internal class TapJSONSerializer {
     private init() {}
 }
 
+// MARK: - TapEncoder
 extension TapJSONSerializer: TapEncoder {
 
     internal typealias EncodedType = Data
@@ -32,6 +33,7 @@ extension TapJSONSerializer: TapEncoder {
     }
 }
 
+// MARK: - TapDecoder
 extension TapJSONSerializer: TapDecoder {
 
     internal typealias DecodedType = Any

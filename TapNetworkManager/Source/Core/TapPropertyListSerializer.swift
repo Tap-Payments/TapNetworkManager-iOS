@@ -8,6 +8,7 @@
 import struct Foundation.NSData.Data
 import class Foundation.NSPropertyList.PropertyListSerialization
 
+/// Property list serializer.
 internal class TapPropertyListSerializer {
 
     // MARK: - Internal -
@@ -22,6 +23,7 @@ internal class TapPropertyListSerializer {
     private init() {}
 }
 
+// MARK: - TapEncoder
 extension TapPropertyListSerializer: TapEncoder {
 
     internal typealias EncodedType = Data
@@ -42,6 +44,7 @@ extension TapPropertyListSerializer: TapEncoder {
     }
 }
 
+// MARK: - TapDecoder
 extension TapPropertyListSerializer: TapDecoder {
 
     internal typealias DecodedType = Any
