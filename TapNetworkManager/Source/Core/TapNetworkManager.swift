@@ -23,7 +23,7 @@ public class TapNetworkManager {
     // MARK: Properties
 
     /// Defines if request logging enabled.
-    public static var isRequestLoggingEnabled = false
+    public var isRequestLoggingEnabled = false
 
     /// Base URL.
     public private(set) var baseURL: URL
@@ -49,7 +49,7 @@ public class TapNetworkManager {
 
             request = try self.createURLRequest(from: operation)
 
-            if type(of: self).isRequestLoggingEnabled {
+            if self.isRequestLoggingEnabled {
 
                 self.log(request)
             }
@@ -57,10 +57,12 @@ public class TapNetworkManager {
             var dataTask: URLSessionDataTask?
             let dataTaskCompletion: (Data?, URLResponse?, Error?) -> Void = { [weak self] (data, response, anError) in
 
-                if TapNetworkManager.isRequestLoggingEnabled {
+                guard let strongSelf = self else { return }
 
-                    self?.log(response, data: data, serializationType: operation.responseType)
-                    self?.log(anError)
+                if strongSelf.isRequestLoggingEnabled {
+
+                    strongSelf.log(response, data: data, serializationType: operation.responseType)
+                    strongSelf.log(anError)
                 }
 
                 if let d = data {

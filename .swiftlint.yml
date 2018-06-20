@@ -2,6 +2,7 @@ excluded:
  Pods
 disabled_rules:
  - line_length
+ - redundant_string_enum_value
 identifier_name:
  min_length:
   warning: 0

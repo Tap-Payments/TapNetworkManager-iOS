@@ -14,9 +14,9 @@
 /// - HEAD: HEAD
 public enum TapHTTPMethod: String {
 
-    case GET
-    case POST
-    case PUT
-    case DELETE
-    case HEAD
+    case GET    = "GET"
+    case POST   = "POST"
+    case PUT    = "PUT"
+    case DELETE = "DELETE"
+    case HEAD   = "HEAD"
 }
