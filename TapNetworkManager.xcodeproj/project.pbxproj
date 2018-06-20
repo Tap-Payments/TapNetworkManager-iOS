@@ -220,6 +220,7 @@
 			buildPhases = (
 				FE42C3681AC599548773E44D /* [CP] Check Pods Manifest.lock */,
 				A4AC0F31200E3E43001306C3 /* Sources */,
+				A43A0A8120DA9A88006B39F1 /* Swift Lint */,
 				A4AC0F32200E3E43001306C3 /* Frameworks */,
 				A4AC0F33200E3E43001306C3 /* Headers */,
 				A4AC0F34200E3E43001306C3 /* Resources */,
@@ -307,6 +308,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A43A0A8120DA9A88006B39F1 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
 		A4F0AFE520A603D30051A264 /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

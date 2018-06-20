@@ -10,7 +10,7 @@ public struct TapBodyModel {
 
     // MARK: - Public -
     // MARK: Properties
-    
+
     /// Serialization type.
     public var serializationType: TapSerializationType = .json
 
