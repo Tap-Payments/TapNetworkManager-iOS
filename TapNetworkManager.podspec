@@ -7,7 +7,7 @@ Pod::Spec.new do |tapNetworkManager|
     tapNetworkManager.name = 'TapNetworkManager'
     tapNetworkManager.summary = 'Lightweight network manager for iOS.'
     tapNetworkManager.requires_arc = true
-    tapNetworkManager.version = '1.1.4'
+    tapNetworkManager.version = '1.1.4.1'
     tapNetworkManager.license = { :type => 'MIT', :file => 'LICENSE' }
     tapNetworkManager.author = { 'Tap Payments' => 'hello@tap.company' }
     tapNetworkManager.homepage = 'https://github.com/Tap-Payments/TapNetworkManager-iOS'

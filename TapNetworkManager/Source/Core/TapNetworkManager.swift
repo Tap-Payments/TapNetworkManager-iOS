@@ -237,9 +237,13 @@ public class TapNetworkManager {
         print("Headers:\n\(headersString)")
     }
 
-    private func log(_ data: Data?, serializationType: TapSerializationType? = nil) {
+    private func log(_ data: Data?, serializationType: TapSerializationType?) {
 
-        guard let body = data, let type = serializationType, let object = try? TapSerializer.deserialize(body, with: type) else { return }
+        guard let body = data else { return }
+
+        let type = serializationType ?? .json
+
+        guard let object = try? TapSerializer.deserialize(body, with: type) else { return }
 
         var jsonWritingOptions: JSONSerialization.WritingOptions
         if #available(iOS 11.0, *) {
