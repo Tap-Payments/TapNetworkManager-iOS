@@ -1,9 +1,9 @@
 PODS:
-  - SDWebImage/Core (4.4.1)
-  - SwiftLint (0.25.1)
-  - TapAdditionsKit/Foundation/URLSession (1.0.8.1):
+  - SDWebImage/Core (4.4.2)
+  - SwiftLint (0.26.0)
+  - TapAdditionsKit/Foundation/URLSession (1.0.9):
     - TapAdditionsKit/Foundation/URLSessionDataTaskResult
-  - TapAdditionsKit/Foundation/URLSessionDataTaskResult (1.0.8.1)
+  - TapAdditionsKit/Foundation/URLSessionDataTaskResult (1.0.9)
 
 DEPENDENCIES:
   - SDWebImage/Core
@@ -17,9 +17,9 @@ SPEC REPOS:
     - TapAdditionsKit
 
 SPEC CHECKSUMS:
-  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
-  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
-  TapAdditionsKit: 652fd8202f9d78e3ebec79d8f907de62f01ee84a
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
+  TapAdditionsKit: fc145c29e8c6d7a1bea73838e74a351a5f2b4d98
 
 PODFILE CHECKSUM: bdb0785082d627a8c996f359cc07f173fdaff058
 

@@ -47,4 +47,24 @@ public class TapNetworkRequestOperation {
         self.bodyModel = bodyModel
         self.responseType = responseType
     }
+
+    // MARK: - Internal -
+    // MARK: Properties
+
+    internal weak var task: URLSessionTask?
+}
+
+// MARK: - Equatable
+extension TapNetworkRequestOperation: Equatable {
+
+    public static func == (lhs: TapNetworkRequestOperation, rhs: TapNetworkRequestOperation) -> Bool {
+
+        return  lhs.httpMethod          == rhs.httpMethod           &&
+                lhs.path                == rhs.path                 &&
+                lhs.additionalHeaders   == rhs.additionalHeaders    &&
+                lhs.urlModel            == rhs.urlModel             &&
+                lhs.bodyModel           == rhs.bodyModel            &&
+                lhs.responseType        == rhs.responseType         &&
+                lhs.task                == rhs.task
+    }
 }

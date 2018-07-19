@@ -18,6 +18,7 @@ public class TapNetworkManager {
 
     // MARK: - Public -
 
+    /// Request completion closure.
     public typealias RequestCompletionClosure = (URLSessionDataTask?, Any?, Error?) -> Void
 
     // MARK: Properties
@@ -27,6 +28,9 @@ public class TapNetworkManager {
 
     /// Base URL.
     public private(set) var baseURL: URL
+
+    /// Current active request operations
+    public private(set) var currentRequestOperations: [TapNetworkRequestOperation] = []
 
     // MARK: Methods
 
@@ -59,6 +63,11 @@ public class TapNetworkManager {
 
                 guard let strongSelf = self else { return }
 
+                if let operationIndex = strongSelf.currentRequestOperations.index(of: operation) {
+
+                    strongSelf.currentRequestOperations.remove(at: operationIndex)
+                }
+
                 if strongSelf.isRequestLoggingEnabled {
 
                     strongSelf.log(response, data: data, serializationType: operation.responseType)
@@ -85,12 +94,29 @@ public class TapNetworkManager {
 
             let task = self.session.dataTask(with: request, completionHandler: dataTaskCompletion)
             dataTask = task
+            operation.task = task
             task.resume()
+
+            self.currentRequestOperations.append(operation)
 
         } catch {
 
             completion?(nil, nil, error)
         }
+    }
+
+    /// Cancels network request operation.
+    ///
+    /// - Parameter operation: Operation to cancel.
+    public func cancelRequest(_ operation: TapNetworkRequestOperation) {
+
+        operation.task?.cancel()
+    }
+
+    /// Cancels all request operations.
+    public func cancelAllOperations() {
+
+        self.currentRequestOperations.forEach { self.cancelRequest($0) }
     }
 
     // MARK: - Private -

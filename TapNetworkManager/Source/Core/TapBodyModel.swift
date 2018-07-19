@@ -28,3 +28,14 @@ public struct TapBodyModel {
         self.body = body
     }
 }
+
+// MARK: - Equatable
+extension TapBodyModel: Equatable {
+
+    public static func == (lhs: TapBodyModel, rhs: TapBodyModel) -> Bool {
+
+        let lhsBody = NSDictionary(dictionary: lhs.body)
+
+        return lhs.serializationType == rhs.serializationType && lhsBody.isEqual(to: rhs.body)
+    }
+}
