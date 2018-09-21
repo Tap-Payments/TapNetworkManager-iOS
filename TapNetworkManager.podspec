@@ -1,18 +1,20 @@
+SDWebImageDependencyVersion         = '>= 4.4' unless defined? SDWebImageDependencyVersion
+TapAdditionsKitDependencyVersion    = '1.1' unless defined? TapAdditionsKitDependencyVersion
+
 Pod::Spec.new do |tapNetworkManager|
     
-    tapNetworkManager.platform = :ios
+    tapNetworkManager.platform              = :ios
     tapNetworkManager.ios.deployment_target = '8.0'
-    tapNetworkManager.swift_version = '4.1'
-    tapNetworkManager.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
-    tapNetworkManager.name = 'TapNetworkManager'
-    tapNetworkManager.summary = 'Lightweight network manager for iOS.'
-    tapNetworkManager.requires_arc = true
-    tapNetworkManager.version = '1.2'
-    tapNetworkManager.license = { :type => 'MIT', :file => 'LICENSE' }
-    tapNetworkManager.author = { 'Tap Payments' => 'hello@tap.company' }
-    tapNetworkManager.homepage = 'https://github.com/Tap-Payments/TapNetworkManager-iOS'
-    tapNetworkManager.source = { :git => 'https://github.com/Tap-Payments/TapNetworkManager-iOS.git', :tag => tapNetworkManager.version.to_s }
-    tapNetworkManager.default_subspecs = 'Core'
+    tapNetworkManager.swift_version         = '4.2'
+    tapNetworkManager.name                  = 'TapNetworkManager'
+    tapNetworkManager.summary               = 'Lightweight network manager for iOS.'
+    tapNetworkManager.requires_arc          = true
+    tapNetworkManager.version               = '1.2.1'
+    tapNetworkManager.license               = { :type => 'MIT', :file => 'LICENSE' }
+    tapNetworkManager.author                = { 'Tap Payments' => 'hello@tap.company' }
+    tapNetworkManager.homepage              = 'https://github.com/Tap-Payments/TapNetworkManager-iOS'
+    tapNetworkManager.source                = { :git => 'https://github.com/Tap-Payments/TapNetworkManager-iOS.git', :tag => tapNetworkManager.version.to_s }
+    tapNetworkManager.default_subspecs      = 'Core'
     
     tapNetworkManager.subspec 'Core' do |core|
     
@@ -22,8 +24,8 @@ Pod::Spec.new do |tapNetworkManager|
     
     tapNetworkManager.subspec 'ImageLoading' do |imageLoading|
     
-        imageLoading.dependency 'SDWebImage/Core'
-        imageLoading.dependency 'TapAdditionsKit/Foundation/URLSession'
+        imageLoading.dependency 'SDWebImage/Core',                          SDWebImageDependencyVersion
+        imageLoading.dependency 'TapAdditionsKit/Foundation/URLSession',    TapAdditionsKitDependencyVersion
         imageLoading.dependency 'TapNetworkManager/Core'
         
         imageLoading.source_files = 'TapNetworkManager/Source/ImageLoading/*.swift'
