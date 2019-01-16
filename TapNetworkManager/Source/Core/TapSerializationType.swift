@@ -2,7 +2,7 @@
 //  TapSerializationType.swift
 //  TapNetworkManager/Core
 //
-//  Copyright © 2018 Tap Payments. All rights reserved.
+//  Copyright © 2019 Tap Payments. All rights reserved.
 //
 
 /// Serialization type.

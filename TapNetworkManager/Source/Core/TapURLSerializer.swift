@@ -2,12 +2,12 @@
 //  TapURLSerializer.swift
 //  TapNetworkManager/Core
 //
-//  Copyright © 2018 Tap Payments. All rights reserved.
+//  Copyright © 2019 Tap Payments. All rights reserved.
 //
 
-import class Foundation.NSNull.NSNull
-import struct Foundation.NSURL.URLComponents
-import struct Foundation.NSURL.URLQueryItem
+import class	Foundation.NSNull.NSNull
+import struct	Foundation.NSURL.URLComponents
+import struct	Foundation.NSURL.URLQueryItem
 
 /// TapURLSerializer class.
 internal class TapURLSerializer {

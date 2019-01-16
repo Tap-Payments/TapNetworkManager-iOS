@@ -2,16 +2,16 @@
 //  TapImageLoader.swift
 //  TapNetworkManager/ImageLoading
 //
-//  Copyright © 2018 Tap Payments. All rights reserved.
+//  Copyright © 2019 Tap Payments. All rights reserved.
 //
 
-import struct CoreGraphics.CGBase.CGFloat
-import class SDWebImage.SDImageCache.SDImageCache
-import class SDWebImage.SDWebImageDownloader.SDWebImageDownloader
-import struct SDWebImage.SDWebImageDownloader.SDWebImageDownloaderOptions
-import class SDWebImage.SDWebImageManager.SDWebImageManager
-import struct TapAdditionsKit.URLSessionAdditions
-import class UIKit.UIImage.UIImage
+import struct	CoreGraphics.CGBase.CGFloat
+import class	SDWebImage.SDImageCache.SDImageCache
+import class	SDWebImage.SDWebImageDownloader.SDWebImageDownloader
+import struct	SDWebImage.SDWebImageDownloader.SDWebImageDownloaderOptions
+import class	SDWebImage.SDWebImageManager.SDWebImageManager
+import class	TapAdditionsKit.URLSession
+import class	UIKit.UIImage.UIImage
 
 /// Image loader.
 public class TapImageLoader {
@@ -71,7 +71,7 @@ public class TapImageLoader {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: Constants.timeoutInterval)
         request.httpMethod = TapHTTPMethod.HEAD.rawValue
 
-        let response = URLSession.synchronousDataTask(with: request).response
+        let response = URLSession.tap_synchronousDataTask(with: request).response
 
         guard response != nil else {
 

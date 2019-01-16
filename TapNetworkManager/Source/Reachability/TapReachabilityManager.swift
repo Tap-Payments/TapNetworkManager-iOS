@@ -2,7 +2,7 @@
 //  TapReachabilityManager.swift
 //  TapNetworkManager/Reachability
 //
-//  Copyright © 2018 Tap Payments. All rights reserved.
+//  Copyright © 2019 Tap Payments. All rights reserved.
 //
 
 import struct Darwin.POSIX.netinet.`in`.sockaddr_in
