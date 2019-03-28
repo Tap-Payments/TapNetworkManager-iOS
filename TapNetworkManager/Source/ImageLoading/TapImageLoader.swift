@@ -193,7 +193,7 @@ public class TapImageLoader {
                 }
 
                 let nonnullImage = image!
-                images![theURLs.index(of: url)!] = nonnullImage
+                images![theURLs.firstIndex(of: url)!] = nonnullImage
                 numberOfLoadedImages += 1
 
                 if numberOfLoadedImages == images!.count {

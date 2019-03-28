@@ -195,7 +195,7 @@ public class TapReachabilityManager {
         let ids = self.listeners.map { $0.key }
         for id in 1... {
 
-            if ids.index(of: id) == nil {
+            if ids.firstIndex(of: id) == nil {
 
                 return id
             }

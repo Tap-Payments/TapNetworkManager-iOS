@@ -63,7 +63,7 @@ public class TapNetworkManager {
 
                 guard let strongSelf = self else { return }
 
-                if let operationIndex = strongSelf.currentRequestOperations.index(of: operation) {
+                if let operationIndex = strongSelf.currentRequestOperations.firstIndex(of: operation) {
 
                     strongSelf.currentRequestOperations.remove(at: operationIndex)
                 }

@@ -1,15 +1,15 @@
-SDWebImageDependencyVersion         = '>= 4.4' unless defined? SDWebImageDependencyVersion
-TapAdditionsKitDependencyVersion    = '>= 1.2' unless defined? TapAdditionsKitDependencyVersion
+SDWebImageDependencyVersion         = '>= 4.4'		unless defined? SDWebImageDependencyVersion
+TapAdditionsKitDependencyVersion	= '>= 1.3.1'	unless defined? TapAdditionsKitDependencyVersion
 
 Pod::Spec.new do |tapNetworkManager|
     
     tapNetworkManager.platform              = :ios
-    tapNetworkManager.ios.deployment_target = '8.0'
-    tapNetworkManager.swift_version         = '4.2'
+    tapNetworkManager.ios.deployment_target	= '8.0'
+    tapNetworkManager.swift_versions        = ['4.2', '5.0']
     tapNetworkManager.name                  = 'TapNetworkManager'
     tapNetworkManager.summary               = 'Lightweight network manager for iOS.'
     tapNetworkManager.requires_arc          = true
-    tapNetworkManager.version               = '1.2.3'
+    tapNetworkManager.version               = '1.2.4'
     tapNetworkManager.license               = { :type => 'MIT', :file => 'LICENSE' }
     tapNetworkManager.author                = { 'Tap Payments' => 'hello@tap.company' }
     tapNetworkManager.homepage              = 'https://github.com/Tap-Payments/TapNetworkManager-iOS'
