@@ -286,9 +286,9 @@ public class TapImageLoader {
                 }
             }
 
-            let imageDownloader = SDWebImageDownloader.shared()
-            imageDownloader.downloadTimeout = Constants.timeoutInterval
-            imageDownloader.maxConcurrentDownloads = 10
+            let imageDownloader = SDWebImageDownloader.shared
+            imageDownloader.config.downloadTimeout = Constants.timeoutInterval
+            imageDownloader.config.maxConcurrentDownloads = 10
 
             _ = imageDownloader.downloadImage(with: url, options: SDWebImageDownloaderOptions.useNSURLCache, progress: progressClosure, completed: completionClosure)
         }
@@ -296,11 +296,11 @@ public class TapImageLoader {
 
     private func save(_ image: UIImage, toCacheWith url: URL) {
 
-        let key = SDWebImageManager.shared().cacheKey(for: url)
+        let key = SDWebImageManager.shared.cacheKey(for: url)
 
-        SDImageCache.shared().store(image, forKey: key)
+        SDImageCache.shared.store(image, forKey: key)
 
-        guard let imagePath = SDImageCache.shared().defaultCachePath(forKey: key), let modificationDate = fileUpdateDate(at: url) else { return }
+        guard let imagePath = SDImageCache.shared.cachePath(forKey: key), let modificationDate = self.fileUpdateDate(at: url) else { return }
 
         let attributes = [FileAttributeKey.modificationDate: modificationDate]
 
@@ -316,14 +316,14 @@ public class TapImageLoader {
 
     private func loadImageFromCache(with url: URL) -> UIImage? {
 
-        let key = SDWebImageManager.shared().cacheKey(for: url)
-        let sharedCache = SDImageCache.shared()
+        let key = SDWebImageManager.shared.cacheKey(for: url)
+        let sharedCache = SDImageCache.shared
 
         var shouldLoadFromCache = false
 
         if sharedCache.diskImageDataExists(withKey: key) {
 
-            shouldLoadFromCache = !self.shouldDownloadFile(from: url, withExistingFilePath: sharedCache.defaultCachePath(forKey: key))
+            shouldLoadFromCache = !self.shouldDownloadFile(from: url, withExistingFilePath: sharedCache.cachePath(forKey: key))
         }
 
         return shouldLoadFromCache ? sharedCache.imageFromDiskCache(forKey: key) : nil
