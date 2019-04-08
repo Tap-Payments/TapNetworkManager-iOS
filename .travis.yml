@@ -15,7 +15,7 @@ env:
     - DESTINATION="OS=9.3,name=iPhone 6"           SCHEME="$IOS_FRAMEWORK_SCHEME"
     - DESTINATION="OS=8.4,name=iPhone 4S"          SCHEME="$IOS_FRAMEWORK_SCHEME"
 before_install:
-  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+  - gem install cocoapods --pre -no-rdoc -no-ri -no-document -quiet
 script:
   - set -o pipefail
   - xcodebuild -version
